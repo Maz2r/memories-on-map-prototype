@@ -16,21 +16,7 @@ struct ContentView: View {
     )
     @State private var selectedMemory: Memory?
     @State var bottomSheetPosition: BottomSheetPosition = .relativeBottom(0.125)
-    @State private var mapType: MKMapType = .standard
     @State var searchText = ""
-    
-    private func toggleMapType() {
-        switch mapType {
-        case .standard:
-            mapType = .satellite
-        case .satellite:
-            mapType = .hybrid
-        case .hybrid:
-            mapType = .standard
-        default:
-            mapType = .standard
-        }
-    }
     
     var body: some View {
         ZStack{
@@ -53,7 +39,7 @@ struct ContentView: View {
                     //A SearchBar as headerContent.
                     HStack {
                         Image(systemName: "magnifyingglass")
-                        TextField("지도 검색", text: self.$searchText)
+                        TextField("게시물 검색", text: self.$searchText)
                     }
                     .foregroundColor(Color(UIColor.secondaryLabel))
                     .padding(.vertical, 8)
@@ -66,15 +52,7 @@ struct ContentView: View {
                     }
                     if selectedMemory != nil {
                         Button(action: {
-                            if selectedMemory != nil {
-                                self.bottomSheetPosition = .relative(0.7)
-                                self.region = MKCoordinateRegion(
-                                    center: CLLocationCoordinate2D(latitude: selectedMemory?.coordinate.latitude ?? 36.0189954294771, longitude: selectedMemory?.coordinate.longitude ?? 129.343164578825),
-                                    span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
-                                )
-                            }
                             self.selectedMemory = nil
-                            self.bottomSheetPosition = .relativeBottom(0.125)
                         }) {
                             Image(systemName: "xmark.circle")
                                 .resizable()
@@ -93,6 +71,8 @@ struct ContentView: View {
                 }, mainContent: {
                     if let selectedMemory = selectedMemory {
                         MemoryView(memory: selectedMemory)
+                    } else {
+                        RecentMemoryListView(selectedMemory: $selectedMemory)
                     }
                 })
                 .enableAppleScrollBehavior()
@@ -106,7 +86,7 @@ struct ContentView: View {
                     span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
                 )
             } else {
-                self.bottomSheetPosition = .relativeBottom(0.125)
+                // If not selected
             }
         }
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AA6FFD32C3CD5450094CC6D /* RecentMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6FFD22C3CD5450094CC6D /* RecentMemoryView.swift */; };
+		6AA6FFD52C3CD6AF0094CC6D /* RecentMemoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6FFD42C3CD6AF0094CC6D /* RecentMemoryListView.swift */; };
+		6AA6FFD72C3CDDD60094CC6D /* AddMemoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6FFD62C3CDDD60094CC6D /* AddMemoryButtonView.swift */; };
 		6AD558452C3A8D27002ED379 /* Memories_on_MapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD558442C3A8D27002ED379 /* Memories_on_MapApp.swift */; };
 		6AD558472C3A8D27002ED379 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD558462C3A8D27002ED379 /* ContentView.swift */; };
 		6AD558492C3A8D28002ED379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD558482C3A8D28002ED379 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6AA6FFD22C3CD5450094CC6D /* RecentMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMemoryView.swift; sourceTree = "<group>"; };
+		6AA6FFD42C3CD6AF0094CC6D /* RecentMemoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMemoryListView.swift; sourceTree = "<group>"; };
+		6AA6FFD62C3CDDD60094CC6D /* AddMemoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoryButtonView.swift; sourceTree = "<group>"; };
 		6AD558412C3A8D27002ED379 /* Memories on Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memories on Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD558442C3A8D27002ED379 /* Memories_on_MapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories_on_MapApp.swift; sourceTree = "<group>"; };
 		6AD558462C3A8D27002ED379 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 				6AD5586E2C3A8E51002ED379 /* MapView.swift */,
 				6AD558732C3AAABF002ED379 /* MemoryView.swift */,
 				6AD558752C3AAAE7002ED379 /* Memory.swift */,
+				6AA6FFD22C3CD5450094CC6D /* RecentMemoryView.swift */,
+				6AA6FFD42C3CD6AF0094CC6D /* RecentMemoryListView.swift */,
+				6AA6FFD62C3CDDD60094CC6D /* AddMemoryButtonView.swift */,
 			);
 			path = "Memories on Map";
 			sourceTree = "<group>";
@@ -278,7 +287,10 @@
 				6AD5586F2C3A8E51002ED379 /* MapView.swift in Sources */,
 				6AD558452C3A8D27002ED379 /* Memories_on_MapApp.swift in Sources */,
 				6AD558762C3AAAE7002ED379 /* Memory.swift in Sources */,
+				6AA6FFD32C3CD5450094CC6D /* RecentMemoryView.swift in Sources */,
+				6AA6FFD72C3CDDD60094CC6D /* AddMemoryButtonView.swift in Sources */,
 				6AD558742C3AAABF002ED379 /* MemoryView.swift in Sources */,
+				6AA6FFD52C3CD6AF0094CC6D /* RecentMemoryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
